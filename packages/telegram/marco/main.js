@@ -6,10 +6,12 @@ exports.main = () => {
     const chat_id = "@tofik_testbot";
 
     // Create Message Body
-    const message = "I am now sending my first message from Digital Ocean Function";
+    const message = `ٱلسَّلَامُ عَلَيْكُمْ \nThis is one line. \nThis is next line \nThis is yet another line`;
+
+    const encoded_message = encodeURIComponent(message);
 
     // Create URL
-    const url = `https://api.telegram.org/bot${process.env.BOT_ID}/sendMessage?chat_id=${chat_id}&text=${message}?&parse_mode=markdown`
+    const url = `https://api.telegram.org/bot${process.env.BOT_ID}/sendMessage?chat_id=${chat_id}&text=${encoded_message}?&parse_mode=markdown`
 
     const config = {
         method: 'post',
