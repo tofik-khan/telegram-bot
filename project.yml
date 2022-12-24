@@ -1,0 +1,19 @@
+parameters: {}
+environment: {}
+packages:
+    - name: telegram
+      shared: false
+      environment: {}
+      parameters: {}
+      annotations: {}
+      functions:
+        - name: marco
+          binary: false
+          main: ""
+          runtime: nodejs:default
+          web: true
+          websecure: false
+          parameters: {}
+          environment: {}
+          annotations: {}
+          limits: {}
