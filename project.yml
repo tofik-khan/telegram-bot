@@ -14,6 +14,7 @@ packages:
           web: true
           websecure: false
           parameters: {}
-          environment: {}
+          environment: 
+            BOT_ID: "${BOT_ID}"
           annotations: {}
           limits: {}

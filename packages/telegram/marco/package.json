@@ -1,0 +1,9 @@
+{
+    "name": "telegram-marco",
+    "version": "1.0.0",
+    "description": "Test function to send messages to bot broadcast to Telegram Chaneel",
+    "main": "main.js",
+    "dependencies": {
+        "axios": "^1.2.1"
+    }
+}
