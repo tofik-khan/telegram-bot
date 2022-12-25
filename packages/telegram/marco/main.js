@@ -3,10 +3,10 @@ var axios = require('axios');
 exports.main = () => {
 
     // Get Chat info
-    const chat_id = "@tofik_testbot";
+    const chat_id = "-1001815542928";
 
     // Create Message Body
-    const message = `ٱلسَّلَامُ عَلَيْكُمْ \nThis is one line. \nThis is next line \nThis is yet another line`;
+    const message = `ٱلسَّلَامُ عَلَيْكُمْ \nThis is me testing a private chat ID`;
 
     const encoded_message = encodeURIComponent(message);
 
@@ -19,7 +19,7 @@ exports.main = () => {
         headers: { }
       };
     
-    axios(config)
+      axios(config)
         .then((response) => {
             console.log(JSON.stringify(response.data));
         })
