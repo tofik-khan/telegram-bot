@@ -10,7 +10,7 @@
 <h3 align="center">Telegram Bot</h3>
 
   <p align="center">
-    A simple Telegram Bot that sends messages to channels and groups via Axios calls
+    A set of simple Telegram Bot that sends messages to channels and groups via Axios calls
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -35,7 +35,7 @@
 
 ## About The Project
 
-This project uses a Telegram bot to send messages to various channels and groups. Ideal use-case would require a cron job set up where the messages are dispatched on a set schedule.
+This project uses Telegram bots to send messages to various channels and groups. Ideal use-case would require a cron job set up where the messages are dispatched on a set schedule.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
