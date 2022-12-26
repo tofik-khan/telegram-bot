@@ -50,5 +50,5 @@ const logResult = (data) => {
 
 const epochToUTC = (epoch) => {
     const dateObj = new Date(epoch * 1000);
-    return `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDate()} ${dateObj.getHours()}:${dateObj.getMinutes()}`;
+    return `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDate()} ${dateObj.getHours()}:${dateObj.getMinutes()} UTC-time`;
 }
