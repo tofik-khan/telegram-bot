@@ -1,6 +1,8 @@
 var axios = require('axios');
 
-exports.main = () => {
+exports.main = async () => {
+
+    console.log("... Starting Bot ...");
 
     // Get Chat info
     const chat_id = "-1001815542928";
@@ -19,13 +21,34 @@ exports.main = () => {
         headers: { }
       };
     
-      axios(config)
+    console.log("Dispatching message to Telegram API");
+
+     await axios(config)
         .then((response) => {
-            console.log(JSON.stringify(response.data));
+            logResult(response.data);
         })
         .catch((error) => {
-            console.log(error);
+            logResult(error);
         });
 
+    console.log("... Bot Done ...")
     return {"body": "Process Complete"};
+}
+
+const logResult = (data) => {
+    if(data.ok) {
+        // Response was successful
+        console.log("Message Dispatched Successfully");
+        console.log("Send to: ", data.result.chat.title);
+        console.log("Sent at: ", epochToUTC(data.result.date));
+    }
+    else {
+        console.log("Message Dispatch Failed");
+        console.log(data.message);
+    }
+}
+
+const epochToUTC = (epoch) => {
+    const dateObj = new Date(epoch * 1000);
+    return `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDate()} ${dateObj.getHours()}:${dateObj.getMinutes()}`;
 }
