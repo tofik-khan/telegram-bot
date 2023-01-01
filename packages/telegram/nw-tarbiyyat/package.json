@@ -1,0 +1,9 @@
+{
+    "name": "telegram-nw-tarbiyyat",
+    "version": "1.0.0",
+    "description": "Scheduled function to send reminder messages to Telegram group",
+    "main": "main.js",
+    "dependencies": {
+        "axios": "^1.2.1"
+    }
+}

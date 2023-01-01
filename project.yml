@@ -18,3 +18,14 @@ packages:
             BOT_ID: "${BOT_ID}"
           annotations: {}
           limits: {}
+        - name: nw-tarbiyyat
+          binary: false
+          main: ""
+          runtime: nodejs:default
+          web: true
+          websecure: false
+          parameters: {}
+          environment: 
+            BOT_ID: "${BOT_ID}"
+          annotations: {}
+          limits: {}
