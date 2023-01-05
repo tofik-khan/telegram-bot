@@ -1,16 +1,15 @@
 var axios = require('axios');
 
-exports.main = async () => {
+exports.main = async (args) => {
 
     console.log("... Starting Bot ...");
+
+    console.log(args);
 
     // Get Chat info
     const chat_id = "-1001815542928";
 
-    // Create Message Body
-    const message = `Testing New Function`;
-
-    const encoded_message = encodeURIComponent(message);
+    const encoded_message = encodeURIComponent(args.message);
 
     // Create URL
     const url = `https://api.telegram.org/bot${process.env.BOT_ID}/sendMessage?chat_id=${chat_id}&text=${encoded_message}?&parse_mode=markdown`
