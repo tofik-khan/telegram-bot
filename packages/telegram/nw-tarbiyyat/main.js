@@ -6,9 +6,6 @@ exports.main = async (args) => {
 
     console.log(args);
 
-    // Get Chat info
-    const chat_id = "-1001815542928";
-
     const encoded_message = encodeURIComponent(args.message);
 
     // Create URL
