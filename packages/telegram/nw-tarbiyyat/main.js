@@ -1,5 +1,11 @@
 var axios = require('axios');
 
+/**
+ * 
+ * @param {message: String, chat: Number | String} args 
+ * @returns void
+ */
+
 exports.main = async (args) => {
 
     console.log("... Starting Bot ...");
@@ -9,7 +15,7 @@ exports.main = async (args) => {
     const encoded_message = encodeURIComponent(args.message);
 
     // Create URL
-    const url = `https://api.telegram.org/bot${process.env.BOT_ID}/sendMessage?chat_id=${process.env.CHAT_ID}&text=${encoded_message}&parse_mode=markdown`
+    const url = `https://api.telegram.org/bot${process.env.BOT_ID}/sendMessage?chat_id=${args.chat}&text=${encoded_message}&parse_mode=markdown`
 
     const config = {
         method: 'post',

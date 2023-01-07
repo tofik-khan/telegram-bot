@@ -27,6 +27,5 @@ packages:
           parameters: {}
           environment: 
             BOT_ID: "${BOT_ID}"
-            CHAT_ID: "${CHAT_ID}"
           annotations: {}
           limits: {}
